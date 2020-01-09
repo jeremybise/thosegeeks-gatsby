@@ -35,6 +35,24 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      docs: allMarkdownRemark(
+        filter: {
+          fields: { sourceName: { eq: "docs" } }
+          frontmatter: { draft: { ne: true } }
+        }
+        sort: { fields: frontmatter___date, order: DESC }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
+        }
+      }
     }
   `)
   const projects = result.data.work.edges
@@ -42,6 +60,20 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `/made${node.fields.slug}`,
       component: path.resolve(`./src/templates/WorkTemplate.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.fields.slug,
+        prev: index === 0 ? null : projects[index - 1].node,
+        next: index === projects.length - 1 ? null : projects[index + 1].node,
+      },
+    })
+  })
+
+  result.data.docs.edges.forEach(({ node }, index) => {
+    createPage({
+      path: `/docs${node.fields.slug}`,
+      component: path.resolve(`./src/templates/DocsTemplate.js`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
