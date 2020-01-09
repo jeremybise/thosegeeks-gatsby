@@ -98,9 +98,11 @@ const actions = css`
     color: ${colors.gray900};
     text-decoration: none;
     text-transform: uppercase;
-    @include text-base;
     letter-spacing: 1px;
     padding: 0.5rem;
+    &.active {
+      color: ${colors.pink700};
+    }
     &:hover {
       color: ${colors.pink700};
     }

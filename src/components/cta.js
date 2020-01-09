@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 import { css } from "@emotion/core"
 
+import Button from "./button"
 import { colors } from "./design-tokens"
 
 const wrapper = css`
@@ -9,13 +9,17 @@ const wrapper = css`
   background: ${colors.pink700};
   color: ${colors.white};
   text-align: center;
+  margin-top: 3rem;
+  & h1 {
+    margin-bottom: 3rem;
+  }
 `
 
 const Cta = () => (
   <aside css={wrapper}>
     <h1>Ready to get to work? Let's go!</h1>
     <p>
-      <Link to="/contact/">Get in Touch</Link>
+      <Button to="/contact/" text="Get in Touch" inverted />
     </p>
   </aside>
 )
