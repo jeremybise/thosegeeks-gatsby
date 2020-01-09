@@ -3,6 +3,7 @@ module.exports = {
     title: `ThoseGeeks Web Design & Development`,
     description: `Based in Virginia, ThoseGeeks designs, builds and hosts quality, hand-crafted, performant websites.`,
     author: `@thosegeeks`,
+    siteUrl: `https://thosegeeks.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -82,6 +83,7 @@ module.exports = {
         icon: `src/images/thosegeeks-icon.png`,
       },
     },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
