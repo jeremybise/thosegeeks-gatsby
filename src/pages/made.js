@@ -8,6 +8,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageTitle from "../components/PageTitle"
 import Cta from "../components/cta"
+import { colors } from "../components/design-tokens"
 
 const workWrapper = css`
   flex-wrap: wrap;
@@ -54,7 +55,7 @@ const projectStyles = css`
       bottom: 75px;
     }
     &:after {
-      opacity: 0.5;
+      opacity: 0.75;
     }
     .arrow {
       opacity: 1;
@@ -65,6 +66,7 @@ const projectStyles = css`
     content: "";
     display: block;
     background: #000000;
+    /* background: ${colors.pink700}; */
     opacity: 0;
     position: absolute;
     top: 0;

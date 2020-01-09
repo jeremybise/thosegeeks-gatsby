@@ -65,7 +65,7 @@ const projectStyles = css`
       bottom: 75px;
     }
     &:after {
-      opacity: 0.5;
+      opacity: 0.75;
     }
     .arrow {
       opacity: 1;

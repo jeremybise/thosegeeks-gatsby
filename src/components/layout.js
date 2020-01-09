@@ -41,6 +41,7 @@ const Layout = ({ children }) => {
       <Global
         styles={css`
           body {
+            color: ${colors.gray900};
             background: ${colors.gray200};
             font-family: ${fonts.bodyFont};
             @media (min-width: ${breakpoints.md}) {
@@ -51,6 +52,7 @@ const Layout = ({ children }) => {
             text-decoration: none;
             color: ${colors.pink700};
             font-weight: bold;
+            transition: 0.3s linear;
             &:hover {
               color: ${colors.pink500};
             }
