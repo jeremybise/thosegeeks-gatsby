@@ -2,8 +2,8 @@
 title: Vincent's Vineyard
 draft: false
 date: 2019-12-11
-hero_image: "vv-hero.jpg"
-header_bg: "vv-hero.jpg"
+hero_image: "vv-hero2.jpg"
+header_bg: "vv-hero2.jpg"
 client_name: Vincent's Vineyard
 headline: "Experience the Grapeness"
 live_url: "https://www.vincentsvineyard.com/"

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `ThoseGeeks`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -21,6 +21,35 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `contact`,
+        path: `${__dirname}/src/content/contact`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `docs`,
+        path: `${__dirname}/src/content/docs`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `is`,
+        path: `${__dirname}/src/content/is`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `does`,
+        path: `${__dirname}/src/content/does`,
+      },
+    },
+    `gatsby-remark-source-name`,
+    {
       resolve: `gatsby-plugin-emotion`,
     },
     `gatsby-transformer-sharp`,
@@ -33,6 +62,9 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
+              linkImagesToOriginal: false,
+              showCaptions: true,
+              wrapperStyle: "margin: 3rem 0;",
             },
           },
         ],
