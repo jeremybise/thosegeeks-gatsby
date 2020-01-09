@@ -1,5 +1,5 @@
+import React, { useState } from "react"
 import { Link } from "gatsby"
-import React from "react"
 import { css } from "@emotion/core"
 
 import { fonts, breakpoints, colors } from "./design-tokens"
@@ -46,7 +46,7 @@ const globalNav = css`
     display: block;
     position: absolute;
     left: 0;
-    top: 30px;
+    top: 65px;
     width: 100%;
     background: ${colors.white};
     z-index: 10;
@@ -110,9 +110,10 @@ const actions = css`
 `
 const mobileNavButton = css`
   position: absolute;
-  top: 1.5rem;
+  top: 2rem;
   right: 1rem;
   display: block;
+  outline: none;
   @media (min-width: ${breakpoints.md}) {
     display: none;
   }
@@ -156,43 +157,55 @@ const mobileNavButton = css`
   }
 `
 
-const Header = () => (
-  <header css={globalHeader}>
-    <div css={logo}>
-      <h1>
-        <Link to="/">thosegeeks_</Link>
-      </h1>
-    </div>
-    <div css={mobileNavButton}>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav css={globalNav}>
-      <ul>
-        <li>
-          <Link to="/made/" activeClassName="active" partiallyActive={true}>
-            Our Work
-          </Link>
-        </li>
-        <li>
-          <Link to="/does/" activeClassName="active">
-            What We Do
-          </Link>
-        </li>
-        <li>
-          <Link to="/is/" activeClassName="active">
-            About Us
-          </Link>
-        </li>
-      </ul>
-    </nav>
-    <div css={actions}>
-      <Link to="/contact/" activeClassName="active">
-        Get In Touch
-      </Link>
-    </div>
-  </header>
-)
+const Header = () => {
+  const [navOpen, setNavOpen] = useState(false)
+
+  const toggleNav = () => {
+    setNavOpen(!navOpen)
+  }
+
+  return (
+    <header css={globalHeader}>
+      <div css={logo}>
+        <h1>
+          <Link to="/">thosegeeks_</Link>
+        </h1>
+      </div>
+      <button
+        css={mobileNavButton}
+        onClick={toggleNav}
+        className={navOpen ? "open" : ""}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav css={globalNav} className={navOpen ? "open" : ""}>
+        <ul>
+          <li>
+            <Link to="/made/" activeClassName="active" partiallyActive={true}>
+              Our Work
+            </Link>
+          </li>
+          <li>
+            <Link to="/does/" activeClassName="active">
+              What We Do
+            </Link>
+          </li>
+          <li>
+            <Link to="/is/" activeClassName="active">
+              About Us
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <div css={actions}>
+        <Link to="/contact/" activeClassName="active">
+          Get In Touch
+        </Link>
+      </div>
+    </header>
+  )
+}
 
 export default Header

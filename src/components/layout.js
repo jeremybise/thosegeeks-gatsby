@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
     & h2 {
       margin-top: 2rem;
       @media (min-width: ${breakpoints.md}) {
-        margin-top: 4rem;
+        margin-top: 3rem;
       }
     }
   `

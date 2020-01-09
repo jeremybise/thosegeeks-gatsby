@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { css } from "@emotion/core"
 
+import SEO from "../components/seo"
 import { fonts } from "../components/design-tokens"
 import Layout from "../components/layout"
 import Narrow from "../components/Narrow"
@@ -26,6 +27,7 @@ const WorkTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO title={project.frontmatter.title} />
       <Narrow>
         <div css={breadcrumbs}>
           &larr; <Link to="/made/">Our Work</Link>
