@@ -105,6 +105,10 @@ const arrowStyles = css`
 `
 const center = css`
   text-align: center;
+  margin-top: 3rem;
+  @media (min-width: ${breakpoints.md}) {
+    margin-top: auto;
+  }
 `
 
 const IndexPage = ({ data }) => (

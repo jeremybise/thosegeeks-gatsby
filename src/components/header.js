@@ -111,7 +111,7 @@ const actions = css`
 const mobileNavButton = css`
   position: absolute;
   top: 2rem;
-  right: 1rem;
+  right: 2rem;
   display: block;
   outline: none;
   @media (min-width: ${breakpoints.md}) {
