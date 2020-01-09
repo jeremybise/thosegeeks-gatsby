@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `ThoseGeeks Web Design & Development`,
     description: `Based in Virginia, ThoseGeeks designs, builds and hosts quality, hand-crafted, performant websites.`,
-    author: `@gatsbyjs`,
+    author: `@thosegeeks`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -76,14 +76,14 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#b83280`,
+        theme_color: `#b83280`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/thosegeeks-icon.png`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
