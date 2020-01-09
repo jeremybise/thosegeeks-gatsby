@@ -5,6 +5,7 @@ import { css } from "@emotion/core"
 import { FiArrowUpRight } from "react-icons/fi"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import PageTitle from "../components/PageTitle"
 import Cta from "../components/cta"
 
@@ -94,6 +95,10 @@ const arrowStyles = css`
 
 const Made = ({ data }) => (
   <Layout>
+    <SEO
+      title="Our Work"
+      description="Check out some of our featured web design and development work."
+    />
     <PageTitle>Our Work</PageTitle>
     <div css={workWrapper}>
       {data.work.edges.map(({ node }) => (

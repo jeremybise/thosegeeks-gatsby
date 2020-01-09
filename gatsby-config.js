@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `ThoseGeeks`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `ThoseGeeks Web Design & Development`,
+    description: `Based in Virginia, ThoseGeeks designs, builds and hosts quality, hand-crafted, performant websites.`,
     author: `@gatsbyjs`,
   },
   plugins: [
