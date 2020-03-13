@@ -3,8 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import { css, Global } from "@emotion/core"
 
 import Header from "./header"
+import "./system.css"
 import "./layout.css"
-import { breakpoints, colors, fonts } from "./design-tokens"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,17 +23,17 @@ const Layout = ({ children }) => {
     padding: 3rem 1rem;
     & h2 {
       margin-top: 2rem;
-      @media (min-width: ${breakpoints.md}) {
+      @media (min-width: var(--bp-md)) {
         margin-top: 3rem;
       }
     }
   `
   const footerStyles = css`
-    background: ${colors.white};
+    background: var(--bg-light);
     text-align: center;
     padding: 1rem;
     font-size: 0.8rem;
-    color: ${colors.gray700};
+    color: var(--text-light);
   `
 
   return (
@@ -41,20 +41,20 @@ const Layout = ({ children }) => {
       <Global
         styles={css`
           body {
-            color: ${colors.gray900};
-            background: ${colors.gray200};
-            font-family: ${fonts.bodyFont};
-            @media (min-width: ${breakpoints.md}) {
+            color: var(--text);
+            background: var(--bg);
+            font-family: var(--body-font);
+            @media (min-width: var(--bp-md)) {
               font-size: 22px;
             }
           }
           a {
             text-decoration: none;
-            color: ${colors.pink700};
+            color: var(--accent);
             font-weight: bold;
             transition: 0.3s linear;
             &:hover {
-              color: ${colors.pink500};
+              color: var(--accent-hover);
             }
           }
           h1,
@@ -63,7 +63,7 @@ const Layout = ({ children }) => {
           h4,
           h5,
           h6 {
-            font-family: ${fonts.headingFont};
+            font-family: var(--heading-font);
             text-transform: uppercase;
           }
           p,
@@ -73,11 +73,11 @@ const Layout = ({ children }) => {
           }
           blockquote {
             font-size: 1.6rem;
-            font-family: ${fonts.headingFont};
+            font-family: var(--heading-font);
             position: relative;
             margin: 2rem 0;
             padding-left: 3rem;
-            @media (min-width: ${breakpoints.md}) {
+            @media (min-width: var(--bp-md)) {
               margin: 3rem 0;
             }
             p {
@@ -89,12 +89,12 @@ const Layout = ({ children }) => {
               left: 0;
               top: 0px;
               font-size: 6rem;
-              color: ${colors.pink700};
-              font-family: ${fonts.headingFont};
+              color: var(--accent);
+              font-family: var(--heading-font);
             }
             cite {
               font-size: 1rem;
-              color: ${colors.gray700};
+              color: var(--text-light);
               display: block;
               font-weight: 400;
               font-style: normal;
