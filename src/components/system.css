@@ -28,8 +28,10 @@
   /* Base Theme */
   --accent: var(--pink700);
   --accent-hover: var(--pink500);
+  --accent-bg: var(--pink700);
   --text: var(--gray900);
   --text-light: var(--gray700);
+  --text-inverted: var(--white);
   --bg: var(--gray200);
   --bg-light: var(--white);
 

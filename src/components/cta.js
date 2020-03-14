@@ -2,12 +2,11 @@ import React from "react"
 import { css } from "@emotion/core"
 
 import Button from "./button"
-import { colors } from "./design-tokens"
 
 const wrapper = css`
   padding: 4rem;
-  background: ${colors.pink700};
-  color: ${colors.white};
+  background: var(--accent-bg);
+  color: var(--text-inverted);
   text-align: center;
   margin-top: 3rem;
   & h1 {
