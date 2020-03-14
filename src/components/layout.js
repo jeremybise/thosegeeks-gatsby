@@ -65,6 +65,7 @@ const Layout = ({ children }) => {
           h6 {
             font-family: var(--heading-font);
             text-transform: uppercase;
+            color: var(--text-light);
           }
           p,
           li,

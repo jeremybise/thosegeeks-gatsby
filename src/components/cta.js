@@ -11,6 +11,7 @@ const wrapper = css`
   margin-top: 3rem;
   & h1 {
     margin-bottom: 3rem;
+    color: var(--text-inverted);
   }
 `
 

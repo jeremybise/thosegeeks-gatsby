@@ -10,8 +10,8 @@ const Button = props => {
     border: 1px solid ${props.inverted ? "var(--white)" : "var(--accent)"};
     color: ${props.inverted ? "var(--white)" : "var(--accent)"};
     &:hover {
-      color: ${props.inverted ? "var(--text)" : "var(--text)"};
-      border: 1px solid ${props.inverted ? "var(--text)" : "var(--text)"};
+      color: ${props.inverted ? "var(--accent)" : "var(--text)"};
+      border: 1px solid ${props.inverted ? "var(--accent)" : "var(--text)"};
       transform: scale(1.2);
     }
   `

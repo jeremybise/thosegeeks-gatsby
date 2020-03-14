@@ -83,6 +83,9 @@ const projectStyles = css`
     width: 100%;
     height: 100%;
     transition: opacity 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    @media (prefers-color-scheme: dark) {
+      opacity: 0.3;
+    }
   }
 `
 const arrowStyles = css`

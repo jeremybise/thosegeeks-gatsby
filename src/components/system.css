@@ -1,7 +1,7 @@
 :root {
   /* Base Colors */
   --black: #000000;
-  --white: #FFFFFF;
+  --white: #ffffff;
   --gray100: #f7fafc;
   --gray200: #edf2f7;
   --gray300: #e2e8f0;
@@ -34,6 +34,21 @@
   --text-inverted: var(--white);
   --bg: var(--gray200);
   --bg-light: var(--white);
+}
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: var(--pink600);
+    --bg: var(--gray900);
+    --bg-light: var(--gray800);
+    --text: var(--gray400);
+    --text-light: var(--gray200);
+    --text-inverted: var(--gray100);
+    --accent-bg: var(--gray800);
+    --image-filter: grayscale(50%);
+  }
 
-  /* Dark Theme */
+  img:not([src*=".svg"]) {
+    /* filter: var(--image-filter); */
+  }
 }
