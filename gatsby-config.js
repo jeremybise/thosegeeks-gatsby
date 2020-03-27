@@ -77,7 +77,7 @@ module.exports = {
         name: `ThoseGeeks`,
         short_name: `ThoseGeeks`,
         start_url: `/`,
-        background_color: `#b83280`,
+        background_color: `#1a202c`,
         theme_color: `#b83280`,
         display: `minimal-ui`,
         icon: `src/images/thosegeeks-icon.png`,
