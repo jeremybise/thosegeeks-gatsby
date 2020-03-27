@@ -7,6 +7,7 @@ const wrapper = css`
   font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
+  color: var(--text);
   @media (min-width: ${breakpoints.md}) {
     font-size: 3.25rem;
   }

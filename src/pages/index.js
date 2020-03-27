@@ -15,6 +15,7 @@ const masthead = css`
   text-transform: uppercase;
   margin: 0;
   margin: 0 0 2rem 0;
+  color: var(--text);
   @media (min-width: ${breakpoints.md}) {
     margin: 2rem 0 3rem 0;
     font-size: 3.25rem;
