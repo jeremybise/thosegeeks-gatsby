@@ -13,13 +13,13 @@ const computeColor = val => {
 const LighthouseResult = props => (
   <div
     css={{
-      border: "1px solid var(--gray700)",
+      border: "1px solid var(--border-light)",
       marginBottom: "1rem",
       display: "flex",
       justifyContent: "space-between",
       textAlign: "center",
       fontSize: "0.8rem",
-      color: "var(--white)",
+      color: "var(--text)",
       borderRadius: "1rem",
       overflowX: "auto",
       minWidth: "100%",
@@ -51,7 +51,7 @@ const LighthouseResult = props => (
           y="50%"
           dominantBaseline="middle"
           textAnchor="middle"
-          fill="var(--white)"
+          fill="var(--text)"
           style={{ fontSize: "8px" }}
         >
           {props.performance}
@@ -75,7 +75,7 @@ const LighthouseResult = props => (
           y="50%"
           dominantBaseline="middle"
           textAnchor="middle"
-          fill="var(--white)"
+          fill="var(--text)"
           style={{ fontSize: "8px" }}
         >
           {props.accessibility}
@@ -99,7 +99,7 @@ const LighthouseResult = props => (
           y="50%"
           dominantBaseline="middle"
           textAnchor="middle"
-          fill="var(--white)"
+          fill="var(--text)"
           style={{ fontSize: "8px" }}
         >
           {props.bestPractices}
@@ -123,7 +123,7 @@ const LighthouseResult = props => (
           y="50%"
           dominantBaseline="middle"
           textAnchor="middle"
-          fill="var(--white)"
+          fill="var(--text)"
           style={{ fontSize: "8px" }}
         >
           {props.seo}

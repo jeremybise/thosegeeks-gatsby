@@ -54,6 +54,7 @@
   --text-inverted: var(--white);
   --bg: var(--gray200);
   --bg-light: var(--white);
+  --border-light: var(--gray400);
 }
 /* Dark Theme */
 @media (prefers-color-scheme: dark) {
@@ -67,6 +68,7 @@
     --text-inverted: var(--gray100);
     --accent-bg: var(--gray800);
     --image-filter: grayscale(50%);
+    --border-light: var(--gray800);
   }
 
   img:not([src*=".svg"]) {
