@@ -125,7 +125,7 @@ const Made = ({ data }) => (
 
 export const query = graphql`
   {
-    work: allMarkdownRemark(
+    work: allMdx(
       filter: {
         fields: { sourceName: { eq: "work" } }
         frontmatter: { draft: { ne: true } }

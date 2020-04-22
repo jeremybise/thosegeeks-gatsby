@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -7,7 +8,7 @@ import Narrow from "../components/Narrow"
 import PageTitle from "../components/PageTitle"
 
 const Contact = ({ data }) => {
-  const page = data.markdownRemark
+  const page = data.mdx
   return (
     <Layout>
       <SEO
@@ -16,7 +17,7 @@ const Contact = ({ data }) => {
       />
       <Narrow>
         <PageTitle>{page.frontmatter.title}</PageTitle>
-        <div dangerouslySetInnerHTML={{ __html: page.html }} />
+        <MDXRenderer>{page.body}</MDXRenderer>
       </Narrow>
     </Layout>
   )
@@ -24,11 +25,11 @@ const Contact = ({ data }) => {
 
 export const query = graphql`
   query ContactQuery {
-    markdownRemark(fields: { sourceName: { eq: "contact" } }) {
+    mdx(fields: { sourceName: { eq: "contact" } }) {
       frontmatter {
         title
       }
-      html
+      body
     }
   }
 `

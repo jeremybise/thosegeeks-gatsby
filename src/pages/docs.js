@@ -21,7 +21,7 @@ const Docs = ({ data }) => (
 
 export const query = graphql`
   {
-    docs: allMarkdownRemark(
+    docs: allMdx(
       filter: {
         fields: { sourceName: { eq: "docs" } }
         frontmatter: { draft: { ne: true } }

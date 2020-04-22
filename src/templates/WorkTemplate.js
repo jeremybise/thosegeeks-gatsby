@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { css } from "@emotion/core"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import SEO from "../components/seo"
 import { fonts } from "../components/design-tokens"
@@ -22,7 +23,7 @@ const prevNext = css`
 `
 
 const WorkTemplate = ({ data, pageContext }) => {
-  const project = data.markdownRemark
+  const project = data.mdx
   const { next, prev } = pageContext
 
   return (
@@ -33,7 +34,7 @@ const WorkTemplate = ({ data, pageContext }) => {
           &larr; <Link to="/made/">Our Work</Link>
         </div>
         <PageTitle>{project.frontmatter.title}</PageTitle>
-        <div dangerouslySetInnerHTML={{ __html: project.html }} />
+        <MDXRenderer>{project.body}</MDXRenderer>
         <div css={prevNext}>
           {prev && (
             <Link to={`/made${prev.fields.slug}`}>
@@ -54,8 +55,8 @@ const WorkTemplate = ({ data, pageContext }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
       }
