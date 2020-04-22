@@ -18,12 +18,20 @@ const LighthouseResult = props => (
       display: "flex",
       justifyContent: "space-between",
       textAlign: "center",
-      // padding: "1rem",
+      fontSize: "0.8rem",
       color: "var(--white)",
       borderRadius: "1rem",
+      overflowX: "auto",
+      minWidth: "100%",
       "& div": {
         flex: 1,
         padding: "2rem",
+        display: "block",
+      },
+      "& svg": {
+        width: "100px",
+        display: "block",
+        margin: "0 auto 1rem auto",
       },
     }}
   >
