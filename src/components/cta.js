@@ -13,6 +13,9 @@ const wrapper = css`
     margin-bottom: 3rem;
     color: var(--text-inverted);
   }
+  & p {
+    margin-bottom: 0;
+  }
 `
 
 const Cta = () => (
