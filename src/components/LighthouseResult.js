@@ -25,13 +25,13 @@ const LighthouseResult = props => (
       minWidth: "100%",
       "& div": {
         flex: 1,
-        padding: "2rem",
+        padding: "1rem",
         display: "block",
       },
       "& svg": {
         width: "100px",
         display: "block",
-        margin: "0 auto 1rem auto",
+        margin: "0 auto 0.5rem auto",
       },
     }}
   >
