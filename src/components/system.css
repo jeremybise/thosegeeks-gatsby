@@ -29,6 +29,17 @@
   --teal700: #2C7A7B;
   --teal800: #285E61;
   --teal900: #234E52;
+  --green100: #F0FFF4;
+  --green200: #C6F6D5;
+  --green300: #9AE6B4;
+  --green400: #68D391;
+  --green500: #48BB78;
+  --green600: #38A169;
+  --green700: #2F855A;
+  --green800: #276749;
+  --green900: #22543D;
+  --orange600: #DD6B20;
+  --red600: #E53E3E;
 
   /* Fonts */
   --body-font: "Roboto", sans-serif;

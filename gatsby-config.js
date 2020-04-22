@@ -49,14 +49,12 @@ module.exports = {
         path: `${__dirname}/src/content/does`,
       },
     },
-    // `gatsby-remark-source-name`,
     {
       resolve: `gatsby-plugin-emotion`,
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      // resolve: `gatsby-transformer-remark`,
       resolve: `gatsby-plugin-mdx`,
       extensions: [`.mdx`, `.md`],
       options: {

@@ -1,0 +1,129 @@
+import React from "react"
+
+const computeColor = val => {
+  if (val >= 90) {
+    return "var(--green600)"
+  } else if (val >= 60 && val <= 90) {
+    return "var(--orange600)"
+  } else if (val >= 0 && val <= 59) {
+    return "var(--red600)"
+  }
+}
+
+const LighthouseResult = props => (
+  <div
+    css={{
+      border: "1px solid var(--gray700)",
+      marginBottom: "1rem",
+      display: "flex",
+      justifyContent: "space-between",
+      textAlign: "center",
+      // padding: "1rem",
+      color: "var(--white)",
+      borderRadius: "1rem",
+      "& div": {
+        flex: 1,
+        padding: "2rem",
+      },
+    }}
+  >
+    <div>
+      <svg viewBox="0 0 36 36">
+        <path
+          d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+          fill="none"
+          stroke={computeColor(props.performance)}
+          strokeWidth="2"
+          strokeDasharray={`${props.performance}, 100`}
+        />
+        <text
+          x="50%"
+          y="50%"
+          dominantBaseline="middle"
+          textAnchor="middle"
+          fill="var(--white)"
+          style={{ fontSize: "8px" }}
+        >
+          {props.performance}
+        </text>
+      </svg>
+      Performance
+    </div>
+    <div>
+      <svg viewBox="0 0 36 36">
+        <path
+          d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+          fill="none"
+          stroke={computeColor(props.accessibility)}
+          strokeWidth="2"
+          strokeDasharray={`${props.accessibility}, 100`}
+        />
+        <text
+          x="50%"
+          y="50%"
+          dominantBaseline="middle"
+          textAnchor="middle"
+          fill="var(--white)"
+          style={{ fontSize: "8px" }}
+        >
+          {props.accessibility}
+        </text>
+      </svg>
+      Accessibility
+    </div>
+    <div>
+      <svg viewBox="0 0 36 36">
+        <path
+          d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+          fill="none"
+          stroke={computeColor(props.bestPractices)}
+          strokeWidth="2"
+          strokeDasharray={`${props.bestPractices}, 100`}
+        />
+        <text
+          x="50%"
+          y="50%"
+          dominantBaseline="middle"
+          textAnchor="middle"
+          fill="var(--white)"
+          style={{ fontSize: "8px" }}
+        >
+          {props.bestPractices}
+        </text>
+      </svg>
+      Best Practices
+    </div>
+    <div>
+      <svg viewBox="0 0 36 36">
+        <path
+          d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+          fill="none"
+          stroke={computeColor(props.seo)}
+          strokeWidth="2"
+          strokeDasharray={`${props.seo}, 100`}
+        />
+        <text
+          x="50%"
+          y="50%"
+          dominantBaseline="middle"
+          textAnchor="middle"
+          fill="var(--white)"
+          style={{ fontSize: "8px" }}
+        >
+          {props.seo}
+        </text>
+      </svg>
+      SEO
+    </div>
+  </div>
+)
+
+export default LighthouseResult

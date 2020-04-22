@@ -7,6 +7,8 @@ headline: "The Best in Complete Landscaping"
 live_url: "https://sclandscape.com"
 ---
 
+import LighthouseResult from "../../../components/LighthouseResult.js";
+
 ## The Problem
 
 We had the pleasure of designing and building the Scott Cleveland website many years ago. It served them well for a long time. Many of the relevant search phrases has them placed on the first page of Google results. But the site was built before responsive design was the standard, so mobile visits to the site were having a less than ideal experience. The design was also old. It was time for an update. Scott and Joya came to us again for help. Here's what we did.
@@ -21,7 +23,11 @@ Responsive all the way
 
 As a result of moving the site off of WordPress and onto the JAMstack, speed tests went from here:
 
-to here:
+<LighthouseResult performance={81} accessibility={79} bestPractices={85} seo={62} />
+
+to this:
+
+<LighthouseResult performance={99} accessibility={100} bestPractices={100} seo={100} />
 
 That's quite a performance improvement, we'd say.
 
