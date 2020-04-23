@@ -7,8 +7,10 @@ const wrapper = css`
   padding: 4rem;
   background: var(--accent-bg);
   color: var(--text-inverted);
+  border: 1px solid var(--accent);
   text-align: center;
   margin-top: 3rem;
+  border-radius: 0.5rem;
   & h1 {
     margin-bottom: 3rem;
     color: var(--text-inverted);

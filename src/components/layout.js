@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
   const contentWrapper = css`
     max-width: 1000px;
     margin: auto;
-    padding: 3rem 1rem;
+    padding: 8rem 1rem;
     & h2 {
       margin-top: 2rem;
       @media (min-width: var(--bp-md)) {

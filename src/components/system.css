@@ -61,12 +61,12 @@
   :root {
     --accent: var(--teal400);
     --accent-hover: var(--teal300);
-    --bg: var(--gray900);
-    --bg-light: var(--gray800);
-    --text: var(--gray400);
+    --bg: #131313;
+    --bg-light: #222;
+    --text: #EEE;
     --text-light: var(--gray200);
-    --text-inverted: var(--gray100);
-    --accent-bg: var(--gray800);
+    --text-inverted: #FFFFFF;
+    --accent-bg: #000000;
     --image-filter: grayscale(50%);
     --border-light: var(--gray800);
   }

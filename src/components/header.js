@@ -3,12 +3,16 @@ import { Link } from "gatsby"
 import { css } from "@emotion/core"
 
 const globalHeader = css`
-  background: var(--bg-light);
+  background: rgba(0, 0, 0, 0.8);
   padding: 1.25rem 1rem;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
   @media (min-width: 767px) {
-    padding: 1.25rem 2rem;
+    padding: 1rem;
   }
 `
 const logo = css`
