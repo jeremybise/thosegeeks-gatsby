@@ -48,18 +48,19 @@
   /* Base Theme */
   --accent: var(--teal600);
   --accent-hover: var(--teal500);
-  --accent-bg: var(--pink700);
+  --accent-bg: var(--teal600);
   --text: var(--gray900);
   --text-light: var(--gray700);
   --text-inverted: var(--white);
   --bg: var(--gray200);
   --bg-light: var(--white);
   --border-light: var(--gray400);
+  --header-bg: rgba(255,255,255,0.9);
 }
 /* Dark Theme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent: var(--teal400);
+    --accent: var(--teal300);
     --accent-hover: var(--teal300);
     --bg: #131313;
     --bg-light: #222;
@@ -69,6 +70,7 @@
     --accent-bg: #000000;
     --image-filter: grayscale(50%);
     --border-light: var(--gray800);
+    --header-bg: rgba(0,0,0,0.8);
   }
 
   img:not([src*=".svg"]) {

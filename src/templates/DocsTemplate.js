@@ -15,6 +15,7 @@ const breadcrumbs = css`
   font-size: 0.8rem;
   text-transform: uppercase;
   font-family: ${fonts.headingFont};
+  text-align: center;
 `
 
 const WorkTemplate = ({ data, pageContext }) => {

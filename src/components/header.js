@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { css } from "@emotion/core"
 
 const globalHeader = css`
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--header-bg);
   padding: 1.25rem 1rem;
   display: flex;
   justify-content: space-between;

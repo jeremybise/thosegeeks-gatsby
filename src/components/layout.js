@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
   `)
 
   const contentWrapper = css`
-    max-width: 1000px;
+    /* max-width: 1000px; */
     margin: auto;
     padding: 8rem 1rem;
     & h2 {

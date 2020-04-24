@@ -16,8 +16,9 @@ const masthead = css`
   margin: 0;
   margin: 0 0 2rem 0;
   color: var(--text);
+  text-align: center;
   @media (min-width: ${breakpoints.md}) {
-    margin: 2rem 0 3rem 0;
+    margin: 2rem 0 6rem 0;
     font-size: 3.25rem;
   }
 `

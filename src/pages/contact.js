@@ -17,7 +17,9 @@ const Contact = ({ data }) => {
       />
       <Narrow>
         <PageTitle>{page.frontmatter.title}</PageTitle>
-        <MDXRenderer>{page.body}</MDXRenderer>
+        <div css={{ textAlign: "center" }}>
+          <MDXRenderer>{page.body}</MDXRenderer>
+        </div>
       </Narrow>
     </Layout>
   )
