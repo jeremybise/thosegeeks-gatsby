@@ -49,12 +49,15 @@ const Layout = ({ children }) => {
             }
           }
           a {
-            text-decoration: none;
+            /* text-decoration: none; */
+            text-decoration-thickness: 5px;
+            text-decoration-color: rgba(100, 255, 218, 0.3);
             color: var(--accent);
             font-weight: bold;
             transition: 0.3s linear;
             &:hover {
               color: var(--accent-hover);
+              text-decoration-color: var(--accent-hover);
             }
           }
           h1,

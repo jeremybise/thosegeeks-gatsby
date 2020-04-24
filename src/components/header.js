@@ -77,10 +77,10 @@ const globalNav = css`
           display: inline-block;
         }
         &.active {
-          color: var(--accent);
+          color: var(--accent-hover);
         }
         &:hover {
-          color: var(--accent);
+          color: var(--accent-hover);
         }
       }
     }
@@ -102,10 +102,10 @@ const actions = css`
     letter-spacing: 1px;
     padding: 0.5rem;
     &.active {
-      color: var(--accent);
+      color: var(--accent-hover);
     }
     &:hover {
-      color: var(--accent);
+      color: var(--accent-hover);
     }
   }
 `
